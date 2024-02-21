@@ -1,0 +1,68 @@
+@use "variaveis";
+
+.footer {
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 40px 285px;
+        background-color: #e6e6e6;
+
+        @media (max-width: 768px) {
+            padding: 20px;
+        }
+    }
+
+    .footer--lorem {
+        margin-bottom: 40px;
+    }
+
+    .footer--copy {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .pborder {
+        border-top: 1px solid variaveis.$corTextoSecundario;
+    }
+
+    .footer--end {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 40px;
+        text-align: center;
+
+        p {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .imgbmwfooter {
+        width: 50px;
+    }
+
+    .footerenddiv {
+        display: flex;
+        gap: 10px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

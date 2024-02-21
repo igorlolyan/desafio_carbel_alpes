@@ -1,0 +1,81 @@
+@use 'variaveis';
+
+.models {
+    padding: 80px 285px;
+
+    @media (max-width: 768px) {
+        padding: 20px;
+    }
+
+    h2 {
+        padding-bottom: 60px;
+    }
+
+    h3 {
+        padding-top: 16px;
+    }
+
+    p {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .modelsicon {
+        fill: variaveis.$corTextoSecundario;
+        height: 24px;
+        width: 24px;
+    }
+
+    .modelsicondiv {
+        margin-bottom: 20px;
+        cursor: pointer;
+
+        svg:hover {
+            fill: variaveis.$corBotaoPrincipal;
+        }
+    }
+
+    button {
+        width: 275px;
+        height: 45px;
+        background-color: variaveis.$corBotaoPrincipal;
+        cursor: pointer;
+        border: none;
+        color: #fff;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        &:hover {
+            background-color: variaveis.$corBotaoPrincipalHover;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    img {
+
+        &:hover {
+            opacity: 50%;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}

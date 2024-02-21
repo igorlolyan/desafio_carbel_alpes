@@ -1,5 +1,124 @@
-$bgColor: blue;
+@use "variaveis";
+@use "banner";
+@use "models";
+@use "footer";
+@use "header";
+@use "toggle";
+
+@font-face {
+    font-family: 'BMWTypeNext';
+    src: url(../../assets/fonts/BMWTypeNext-Light.20210426144302.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'BMWTypeNext';
+    src: url(../../assets/fonts/BMWTypeNext-Bold.20210426144302.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
 
 body {
-    background-color: $bgColor;
+    background-color: variaveis.$corDeFundo;
+    font-family: "BMWTypeNext Pro Regular", sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-family: "BMWTypeNext Pro Regular", sans-serif;
+    font-weight: lighter;
+}
+
+h3 {
+    font-family: "BMWTypeNext Pro Regular", sans-serif;
+    font-weight: 100;
+    color: variaveis.$corTextoPrincipal;
+}
+
+p {
+    font-family: "BMWTypeNext Pro Regular", sans-serif;
+    font-weight: 100;
+    color: variaveis.$corTextoSecundario;
+}
+
+button {
+    text-align: center;
+    font-family: "BMWTypeNext Pro Regular", sans-serif;
+    font-weight: bold;
+}
+
+
+.text--xl {
+    font-size: 40px;
+    line-height: 48px;
+    color: variaveis.$corTextoPrincipal;
+}
+
+.text--l {
+    font-size: 22px;
+    line-height: 26px;
+    color: variaveis.$corTextoPrincipal;
+}
+
+.text--m {
+    font-size: 14px;
+    line-height: 22px;
+    color: variaveis.$corTextoPrincipal;
+}
+
+.text--s {
+    font-size: 14px;
+    line-height: 19px;
+    color: variaveis.$corTextoSecundario;
+}
+
+.text--xs {
+    font-size: 12px;
+    line-height: 15px;
+    color: variaveis.$corTextoPrincipal;
+}
+
+a {
+    color: variaveis.$corTextoPrincipal;
+}
+
+.button {
+    max-width: 165px;
+    width: 100%;
+    height: 43px;
+    font-size: 14px;
+    background-color: variaveis.$corBotaoPreto;
+    cursor: pointer;
+    color: #fff;
+    padding: 12px 18px;
+
+    &:hover {
+        background-color: variaveis.$corBotaoPretoHover;
+    }
+}
+
+.buttonwhatsapp {
+    max-width: 165px;
+    width: 100%;
+    height: 43px;
+    font-size: 14px;
+    background-color: variaveis.$corBotaoSecundario;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 12px 18px;
+
+    &:hover {
+        background-color: variaveis.$corBotaoSecundarioHover;
+    }
 }
